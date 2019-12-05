@@ -1,0 +1,32 @@
+{
+    "name": "mysql-table-types",
+    "version": "1.0.0",
+    "description": "Export mysql table schema to TypeScript declaration.",
+    "main": "index.js",
+    "bin": "./cli.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rhapsodyn/mysql-table-types.git"
+    },
+    "keywords": [
+        "mysql",
+        "mysqljs",
+        "table schema",
+        "jsdoc",
+        "typing.d.ts",
+        "typescript"
+    ],
+    "author": "rhapsodyn",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rhapsodyn/mysql-table-types/issues"
+    },
+    "homepage": "https://github.com/rhapsodyn/mysql-table-types#readme",
+    "dependencies": {
+        "mysql": "^2.17.1",
+        "yargs": "^15.0.2"
+    }
+}
