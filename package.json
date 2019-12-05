@@ -1,6 +1,6 @@
 {
     "name": "mysql-table-types",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Export mysql table schema to TypeScript declaration.",
     "main": "index.js",
     "bin": "./cli.js",

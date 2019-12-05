@@ -12,7 +12,7 @@ const argv = require('yargs')
 
 const { i, o, v } = argv;
 const log = v ? console.log : () => {};
-const confStr = fs.readFileSync(path.join(__dirname, i));
+const confStr = fs.readFileSync(i);
 
 log('generating....');
 generate(JSON.parse(confStr))
@@ -25,7 +25,7 @@ generate(JSON.parse(confStr))
         } else {
             const allDefsStr = defs.join('');
             log('writing....');
-            fs.writeFileSync(path.join(__dirname, o), allDefsStr);
+            fs.writeFileSync(o, allDefsStr);
         }
         log('done!');
     })
