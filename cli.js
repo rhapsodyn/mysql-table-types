@@ -11,16 +11,20 @@ const argv = require('yargs')
     .demandOption(['i']).argv;
 
 const { i, o, v } = argv;
-const log = v ? console.log : () => {};
-const confStr = fs.readFileSync(i);
+function log(sth, force = false) {
+    if (force || v) {
+        console.log(sth);
+    }
+}
 
 log('generating....');
+const confStr = fs.readFileSync(i);
 generate(JSON.parse(confStr))
     .then(defs => {
         log(`${defs.length} tables parsed....`);
         if (!o) {
             for (const def of defs) {
-                log(def);
+                log(def, true);
             }
         } else {
             const allDefsStr = defs.join('');
